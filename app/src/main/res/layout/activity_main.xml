@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="biz.wighton.android.loancalculator.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LoanAmount"
+        android:id="@+id/textViewLoanAmount"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/editTextLoanAmount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DepositAmount"
+        android:id="@+id/textViewDepositAmount"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/editTextDepositAmount" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/InterestRate"
+        android:id="@+id/textViewInterestRate"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/editTextInterestRate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/LoanDuration"
+        android:id="@+id/textViewLoanDuration"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/editTextLoanDuration" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Repayment"
+        android:id="@+id/textViewRepayment"
+        android:layout_alignParentStart="true"
+        android:layout_alignBaseline="@+id/textViewRepaymentValue" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextLoanAmount"
+        android:hint="@string/DollarDefault"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextDepositAmount"
+        android:hint="@string/DollarDefault"
+        android:layout_below="@+id/editTextLoanAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextInterestRate"
+        android:hint="@string/PercentDefault"
+        android:layout_below="@+id/editTextDepositAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextLoanDuration"
+        android:hint="@string/ZeroYears"
+        android:layout_below="@+id/editTextInterestRate"
+        android:layout_alignStart="@+id/editTextInterestRate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/ZeroDollars"
+        android:id="@+id/textViewRepaymentValue"
+        android:layout_below="@+id/editTextLoanDuration"
+        android:layout_alignEnd="@+id/editTextLoanDuration" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewRepayment"
+        android:layout_alignParentStart="true"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/radioButtonMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:checked="true"
+            android:text="@string/Monthly" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFortnightly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/Fortnightly" />
+
+        <RadioButton
+            android:id="@+id/radioButtonWeekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:text="@string/Weekly" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Calculate"
+        android:id="@+id/buttonCalculate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/textViewRepaymentValue"
+        android:layout_alignEnd="@+id/textViewRepaymentValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/DepositPercent"
+        android:id="@+id/textViewDepositPercent"
+        android:layout_alignLeft="@+id/textViewRepaymentValue"
+        android:layout_alignStart="@+id/textViewRepaymentValue"
+        android:layout_alignBottom="@+id/textViewDepositAmount" />
+
+</RelativeLayout>

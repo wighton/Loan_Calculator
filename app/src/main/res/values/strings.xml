@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Loan Calculator</string>
+    <string name="LoanDuration">Loan Duration *</string>
+    <string name="PercentDefault">0.00%</string>
+    <string name="DollarDefault">$0.00</string>
+    <string name="LoanAmount">Loan Amount *</string>
+    <string name="DepositAmount">Deposit Amount</string>
+    <string name="InterestRate">Interest Rate *</string>
+    <string name="Repayment">Repayment</string>
+    <string name="ZeroYears">0 years</string>
+    <string name="ZeroDollars">$0.00</string>
+    <string name="Weekly">Weekly</string>
+    <string name="Monthly">Monthly</string>
+    <string name="Fortnightly">Fortnightly</string>
+    <string name="Calculate">Calculate</string>
+    <string name="DepositPercent">0.00%</string>
+</resources>
